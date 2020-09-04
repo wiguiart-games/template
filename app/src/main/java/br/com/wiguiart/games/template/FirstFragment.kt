@@ -10,9 +10,10 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import br.com.wiguiart.games.template.di.Injectable
+import dagger.android.support.DaggerFragment
 import javax.inject.Inject
 
-class FirstFragment : Fragment(), Injectable {
+class FirstFragment : DaggerFragment(), Injectable {
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
 

@@ -1,16 +1,15 @@
 package br.com.wiguiart.games.template
 
-import android.app.Activity
-import android.app.Application
 import android.content.Context
 import androidx.multidex.MultiDex
 import br.com.wiguiart.games.template.di.AppInjector
+import br.com.wiguiart.games.template.di.DaggerAppComponent
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.analytics.ktx.analytics
 import com.google.firebase.ktx.Firebase
-import dagger.android.DispatchingAndroidInjector
-import dagger.android.HasActivityInjector
-import javax.inject.Inject
+import dagger.android.AndroidInjector
+import dagger.android.DaggerApplication
+
 
 /**
  * Classe correspondente ao objeto de aplicação do app
@@ -21,10 +20,11 @@ import javax.inject.Inject
  *
  * @since 1.0
  */
-class TemplateApplication : Application() , HasActivityInjector {
+class TemplateApplication : DaggerApplication()  {
 
-    @Inject
-    lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Activity>
+    private val applicationInjector = DaggerAppComponent.builder().application(this).build()
+    override fun applicationInjector(): AndroidInjector<out DaggerApplication> = applicationInjector
+
 
     lateinit var firebaseAnalytics: FirebaseAnalytics
         private set
@@ -48,7 +48,4 @@ class TemplateApplication : Application() , HasActivityInjector {
 
         firebaseAnalytics = Firebase.analytics
     }
-
-    override fun activityInjector() = dispatchingAndroidInjector
-
 }
