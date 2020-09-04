@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1092202935167",
+    "firebase_url": "https://templatewiguiart.firebaseio.com",
+    "project_id": "templatewiguiart",
+    "storage_bucket": "templatewiguiart.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1092202935167:android:afbaf904fa0b1d7ccea04a",
+        "android_client_info": {
+          "package_name": "br.com.wiguiart.games.template"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1092202935167-01obf1a3e1dd0ghcsjri1cu9dv54iu7v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACWBJxP7lfGAOdh-4_gRhV5k0ln2UuNtU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1092202935167-01obf1a3e1dd0ghcsjri1cu9dv54iu7v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
