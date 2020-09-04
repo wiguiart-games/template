@@ -1,11 +1,16 @@
 package br.com.wiguiart.games.template
 
+import android.app.Activity
 import android.app.Application
 import android.content.Context
 import androidx.multidex.MultiDex
+import br.com.wiguiart.games.template.di.AppInjector
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.analytics.ktx.analytics
 import com.google.firebase.ktx.Firebase
+import dagger.android.DispatchingAndroidInjector
+import dagger.android.HasActivityInjector
+import javax.inject.Inject
 
 /**
  * Classe correspondente ao objeto de aplicação do app
@@ -16,7 +21,10 @@ import com.google.firebase.ktx.Firebase
  *
  * @since 1.0
  */
-class TemplateApplication : Application() {
+class TemplateApplication : Application() , HasActivityInjector {
+
+    @Inject
+    lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Activity>
 
     lateinit var firebaseAnalytics: FirebaseAnalytics
         private set
@@ -24,6 +32,7 @@ class TemplateApplication : Application() {
     override fun attachBaseContext(base: Context) {
         super.attachBaseContext(base)
         MultiDex.install(this)
+        AppInjector.init(this)
     }
 
     /**
@@ -39,5 +48,7 @@ class TemplateApplication : Application() {
 
         firebaseAnalytics = Firebase.analytics
     }
+
+    override fun activityInjector() = dispatchingAndroidInjector
 
 }
