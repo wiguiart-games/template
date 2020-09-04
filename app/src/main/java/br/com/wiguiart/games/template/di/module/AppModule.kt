@@ -1,4 +1,4 @@
-package br.com.wiguiart.games.template.di
+package br.com.wiguiart.games.template.di.module
 
 import dagger.Module
 

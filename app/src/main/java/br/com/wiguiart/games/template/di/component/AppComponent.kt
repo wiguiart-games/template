@@ -1,7 +1,9 @@
-package br.com.wiguiart.games.template.di
+package br.com.wiguiart.games.template.di.component
 
 import android.app.Application
 import br.com.wiguiart.games.template.TemplateApplication
+import br.com.wiguiart.games.template.di.module.AppModule
+import br.com.wiguiart.games.template.di.module.MainActivityModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule

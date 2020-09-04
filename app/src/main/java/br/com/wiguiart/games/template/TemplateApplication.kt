@@ -3,7 +3,7 @@ package br.com.wiguiart.games.template
 import android.content.Context
 import androidx.multidex.MultiDex
 import br.com.wiguiart.games.template.di.AppInjector
-import br.com.wiguiart.games.template.di.DaggerAppComponent
+import br.com.wiguiart.games.template.di.component.DaggerAppComponent
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.analytics.ktx.analytics
 import com.google.firebase.ktx.Firebase

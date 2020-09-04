@@ -1,6 +1,6 @@
-package br.com.wiguiart.games.template.di
+package br.com.wiguiart.games.template.di.module
 
-import br.com.wiguiart.games.template.MainActivity
+import br.com.wiguiart.games.template.presentation.main.MainActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 

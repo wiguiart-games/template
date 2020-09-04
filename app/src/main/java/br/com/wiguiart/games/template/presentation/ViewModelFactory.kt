@@ -1,4 +1,4 @@
-package br.com.wiguiart.games.template
+package br.com.wiguiart.games.template.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

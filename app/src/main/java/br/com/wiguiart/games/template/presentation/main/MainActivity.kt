@@ -1,7 +1,8 @@
-package br.com.wiguiart.games.template
+package br.com.wiguiart.games.template.presentation.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import br.com.wiguiart.games.template.R
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.support.DaggerAppCompatActivity
 import javax.inject.Inject

@@ -1,9 +1,9 @@
-package br.com.wiguiart.games.template.di
+package br.com.wiguiart.games.template.di.module
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import br.com.wiguiart.games.template.FirstFragmentViewModel
-import br.com.wiguiart.games.template.ViewModelFactory
+import br.com.wiguiart.games.template.presentation.main.MainFragmentViewModel
+import br.com.wiguiart.games.template.presentation.ViewModelFactory
 import dagger.Binds
 import dagger.MapKey
 import dagger.Module
@@ -14,8 +14,8 @@ import kotlin.reflect.KClass
 abstract class ViewModelModule {
     @Binds
     @IntoMap
-    @ViewModelKey(FirstFragmentViewModel::class)
-    abstract fun bindFirstFragmentViewModel(fragmentViewModel: FirstFragmentViewModel): ViewModel
+    @ViewModelKey(MainFragmentViewModel::class)
+    abstract fun bindFirstFragmentViewModel(fragmentViewModel: MainFragmentViewModel): ViewModel
 
     @Binds
     abstract fun bindViewModelFactory(factory: ViewModelFactory): ViewModelProvider.Factory
